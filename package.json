@@ -3,12 +3,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "compile": "solcjs --abi --include-path node_modules/ --base-path . blockchain/contracts/Lottery.sol --output-dir blockchain/build"
   },
   "dependencies": {
+    "@chainlink/contracts": "^0.6.0",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "solc": "^0.8.11",
+    "web3": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
